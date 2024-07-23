@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="D:\RRP\static\signup-style.css">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <div class="signup-container">
+        <form class="signup-form" action="/signup" method="POST">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">I agree to the terms and conditions</label>
+            </div>
+            <div class="center-button">
+                <button type="submit" class="signup-button">Sign Up</button>
+            </div>
+        </form>
+        <div class="already-signed-up">
+            <p>Already have an account? <a href="D:\RRP\templates\login.html">Log In</a></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

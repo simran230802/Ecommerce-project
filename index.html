@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+</body>
+<div class="content">
+    {% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="home-content" style="background-image: url('/static/background.png');">
+    <div class="content-wrapper">
+        <div class="content-box">
+    <h1>Fresh Ingredients,Better Taste</h1>
+    <p>Adopting a new healthier lifestyle can involve changing diet to include more fresh fruit and vegetables as well as increasing levels of exercise.</p>
+    <a href="/product" class="products-button">Our Products</a>
+</div>
+    </div>
+</div>
+{% endblock %}
+</div>
+</html>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>White Sugar Product Page</title>
+    <link rel="stylesheet" href="D:\RRP\static\white sugar style.css">
+    <link rel="stylesheet" href="D:\RRP\static\popup.css">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}White Sugar - Product Details{% endblock %}
+
+{% block content %}
+<div class="product-details">
+    <div class="product-image">
+        <img src="D:\RRP\static\White Sugar.jpg" alt="White Sugar">
+    </div>
+    <div class="product-info">
+        <h2>White Sugar</h2>
+        <p><strong>Brand: RRP INTERNATIONAL</strong></p>
+        <p>
+            RRP International is an exporter and supplier of White Sugar,a carbohydrate that provides instant energy to the body.
+            White sugar is used in many foods, such as baked goods that require rising, like meringues, mousses and soufflés. 
+            It is also used to sweeten beverages and savoury dishes.
+        </p>
+        <p><strong>Price:</strong> On Request</p>
+
+        <!-- Quantity Selector -->
+        <div class="quantity-selector">
+            <label for="quantity"><strong>Quantity:</strong></label>
+            <div class="quantity-controls">
+                <button class="decrease-quantity">-</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" step="1">
+                <button class="increase-quantity">+</button>
+            </div>
+        </div>
+        <div class="product-info">
+        <p>Send Inquiry for order details.</p>
+        <p><strong>Country of Origin:</strong> India</p>
+        </div>
+        <!-- Place Order Button -->
+        <button class="place-order-button">Place Order</button>
+        <button class="send-inquiry-button" onclick="sendInquiry()">Send Inquiry</button>
+        <!-- Add to Wishlist and Add to Compare Buttons -->
+        <div class="action-buttons">
+            <button class="add-to-wishlist-button">Add to Wishlist</button>
+            <button class="add-to-compare-button">Add to Compare</button>
+        </div>
+        <!-- Share Options -->
+        <div class="share-options-container">
+            <p>Share this product:</p>
+            <ul class="share-options">
+                <li>
+                    <a href="whatsapp://send?text=Check%20out%20this%20Turmeric%20product%20at%20RRP%20International:%20[insert_product_url_here]" target="_blank">
+                        <img src="D:\RRP\static\whtspp.jpg" alt="WhatsApp">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:?subject=Check%20out%20this%20Turmeric%20product%20at%20RRP%20International&body=I%20found%20this%20amazing%20Turmeric%20product%20at%20RRP%20International.%20[insert_product_url_here]" target="_blank">
+                        <img src="D:\RRP\static\email.png" alt="Email">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=[insert_product_url_here]" target="_blank">
+                        <img src="D:\RRP\static\facebook.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/?url=[insert_product_url_here]" target="_blank">
+                        <img src="D:\RRP\static\insta.jpg" alt="Instagram">
+                    </a>
+                </li>
+            </ul>
+            <div class="copy-link-button" onclick="copyProductURL()">
+                <img src="D:\RRP\static\copy-link.jpg" alt="Copy Link">
+            </div>
+        </div>
+        <div class="login-section">
+            <p>Please login to write review.</p>
+            <a href="D:\RRP\templates\login.html" class="login-button">Login</a>
+        </div>
+    </div>
+</div>
+<!-- Link Copied Message Popup -->
+<div class="link-copied-message" id="link-copied-popup">
+    Link Copied!
+</div>
+<button class="send-inquiry-button" onclick="openPopup()">Send Inquiry</button>
+
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" id="closePopupBtn">&times;</span>
+        <h2>Product Inquiry</h2>
+        <form id="inquiryForm">
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <label for="message">Inquiry Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </div>
+</div>
+
+<script src="D:\RRP\static\white sugar script.js"></script>
+<script src="D:\RRP\static\popup.js"></script>
+{% endblock %}
+</body>
+</html>

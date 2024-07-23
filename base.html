@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-and-name">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="logo">
+            <h1 class="website-name">INTERNATIONAL</h1>
+        </div>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li class="dropdown" id="about-dropdown">
+                <a href="#" class="dropbtn" onclick="toggleAboutDropdown(event)">ABOUT US</a>
+                <ul class="dropdown-content" id="about-dropdown-content" style="display: none;">
+                    <li><a href="/about/profile">COMPANY PROFILE</a></li>
+                    <li><a href="/about/exports">ABOUT OUR EXPORTS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" id="products-dropdown">
+                <a href="#" class="dropbtn" onclick="toggleDropdown(event)">PRODUCTS</a>
+                <ul class="dropdown-content" id="products-dropdown-content" style="display: none;">
+                    <div class="column">
+                        <li><a href="/products/white_sugar">WHITE SUGAR</a></li>
+                        <li><a href="/products/brown_sugar">BROWN SUGAR</a></li>
+                        <li><a href="/products/rice">RICE</a></li>
+                        <li><a href="/products/wheat">WHEAT</a></li>
+                        <li><a href="/products/red_chillis">RED CHILLIS</a></li>
+                        <li><a href="/products/green_chillis">GREEN CHILLIS</a></li>
+                        <li><a href="/products/tea_powder">TEA POWDER</a></li>
+                    </div>
+                    <div class="column">
+                        <li><a href="/products/dry_fruits">DRY FRUITS CASHEW</a></li>
+                        <li><a href="/products/seasonal_fruits">SEASONAL FRUITS</a></li>
+                        <li><a href="/products/green_cardamom">GREEN CARDAMOM</a></li>
+                        <li><a href="/products/green_cardamom_powder">GREEN CARDAMOM POWDER</a></li>
+                        <li><a href="/products/turmeric.html">TURMERIC</a></li>
+                        <li><a href="/products/yellow_maize">YELLOW MAIZE</a></li>
+                        <li><a href="/products/black_pepper">BLACK PEPPER</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li><a href="/contact">CONTACT US</a></li>
+            <li class="dropdown" id="shopping-cart-dropdown">
+                <a href="#" class="dropbtn" onclick="toggleShoppingCart(event)">🛒</a>
+                <div class="dropdown-content" id="shopping-cart-content" style="display: none;">
+                    <p>Your shopping cart is empty.</p>
+                </div>
+            </li>
+            <li class="dropdown" id="my-account-dropdown">
+                <a href="#" class="dropbtn" onclick="toggleDropdown(event)">👤</a>
+                <ul class="dropdown-content" id="my-account-dropdown-content" style="display: none;">
+                    <li><a href="/account/my_account">MY ACCOUNT</a></li>
+                    <li><a href="/account/wishlist">MY WISHLIST</a></li>
+                    <li><a href="/account/orders">ORDERS</a></li>
+                    <li><a href="/account/compare">COMPARE</a></li>
+                    <li><a href="/login">LOG IN</a></li>
+                    <li><a href="/signup">SIGN UP</a></li>
+                </ul>
+            </li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search...">
+                <span class="fa fa-search"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

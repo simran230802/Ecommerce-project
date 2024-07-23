@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="D:\RRP\static\login-style.css">
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+    <div class="login-container">
+        <form class="login-form" action="/login" method="POST">
+            <h2></h2>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="center-button">
+                <button type="submit" class="login-button">Login</button>
+        </div>
+        </form>
+        <div class="social-login">
+            <h3>Or continue with:</h3>
+            <div class="social-buttons">
+                <button class="btn-google">Google</button>
+                <button class="btn-facebook">Facebook</button>
+                <!-- Add more social login options as needed -->
+            </div>
+        </div>
+        <div class="already-signed-up">
+            <p>Don't have an account? <a href="D:\RRP\templates\signup.html">Sign Up</a></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
