@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/static/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center;
+
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fff; 
+    padding: 5px;
+    border: 1px solid #0f0f0f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px; 
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.forgot-password a {
+    color: #0d0d0d;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    background-color: #4b0509;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-login h3 {
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button.btn-google {
+    background-color: #c02517;
+    color: #fff;;
+    border: 2px solid #0f0f0f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button.btn-facebook{
+    background-color: #3b5998;
+    color: #fff;
+    border: 2px solid #0f0f0f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button.btn-google:hover,
+button.btn-facebook:hover {
+    background-color: #f7999e;
+}
+
+.already-signed-up {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.already-signed-up a {
+    color: #480202;
+    text-decoration: none;
+}
+
+.already-signed-up a:hover {
+    text-decoration: underline;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login-form button.login-button {
+    width: 200px; /* Set the desired width for the button */
+    height: 50px; /* Set the desired height for the button */
+    padding: 10px; /* Adjust the padding to increase the size of the button */
+    font-size: 16px; /* Adjust the font size of the button text */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('D:\RRP\static\background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

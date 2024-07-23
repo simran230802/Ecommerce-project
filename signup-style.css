@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/static/background.png"); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="checkbox"] {
+    padding: 5px;
+    border: 1px solid #580306;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.signup-button {
+    background-color: #580306;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.already-signed-up {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.already-signed-up a {
+    color: #580306;
+    text-decoration: none;
+}
+
+.checkbox-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}

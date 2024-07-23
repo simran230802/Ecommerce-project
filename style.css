@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #faf6f6;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.logo-and-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.website-name {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 0;
+    color: rgb(19, 19, 19);
+    margin-left: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    color: rgb(18, 18, 18);
+    text-decoration: none;
+}
+
+.shopping-cart {
+    font-size: 24px;
+    color: white;
+}
+
+.my-account {
+    font-size: 24px;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px 10px 5px 5px; /* Adjust the padding as needed */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.fa-search {
+    position: absolute;
+    right: 10px;
+    color: #ccc;
+}
+
+.home-content {
+    height: 100vh;
+    display: flex;
+    background-image: url('/static/background.png');
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(18, 17, 17, 0.953);
+    position: relative;
+}
+
+.home-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(242, 237, 237,0.8); /* Adjust the opacity as needed (0.0 to 1.0) */
+    z-index: -1; /* Move the pseudo-element behind the content */
+}
+
+.content-wrapper {
+    position: relative; /* Add position relative to enable stacking */
+    z-index: 1; /* Move the content above the pseudo-element */
+}
+
+.home-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.home-content p {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.content-box {
+    padding: 20px; /* Add padding to create spacing inside the box */
+    border: 3px solid #292828; /* Add a 1-pixel solid border around the box */
+    max-width: 1000px; /* Set a maximum width for the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+
+}
+
+.products-button {
+    display: inline-block;
+    background-color: #272829; /* Change the background color to your desired color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px; /* Add margin to create spacing between the paragraph and the button */
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    font-size: 10px;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    flex-basis: 50%; /* Set each item to take half of the available width */
+    box-sizing: border-box; /* Include padding and border in the item's width */
+}
+
+.dropdown-content li a {
+    color: black;
+    text-decoration: none;
+}
+
+.products-dropdown-content {
+    font-size: 16px; /* Adjust the font size as needed */
+    display: flex; /* Use Flexbox to create a flexible layout */
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    /* Allow each column to grow equally to occupy the available space */
+}
+
+/* Adjust the styles for the product list items as needed */
+.products-dropdown-content li {
+    margin: 5px 0;
+    list-style: none;
+}
+
+/* Display columns side by side */
+.dropdown-content {
+    display: flex;
+}
+
+/* Adjust the width of the columns to fit two items in each row */
+.column {
+    width: 100%;
+}
+
+.search-bar {
+    /* ... Your existing styles ... */
+    position: relative;
+}
+
+/* Hide the search dropdown content by default */
+.dropdown-content,
+#shopping-cart-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    font-size: 10px;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Specific styles for the about dropdown content */
+.about-dropdown-content {
+    font-size: 16px; /* Adjust the font size as needed */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Adjust the styles for the about dropdown list items as needed */
+.about-dropdown-content li {
+    margin: 5px 0;
+    list-style: none;
+}
+
+/* Display columns side by side */
+.about-dropdown-content {
+    display: flex;
+}
+
+/* Adjust the width of the columns to fit two items in each row */
+.about-dropdown-content .column {
+    width: 100%;
+}
+
+/* Add the following styles to create columns in the dropdown */
+.dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 150px; /* Set a minimum width for each column */
+    margin-right: 20px; /* Add margin between columns */
+}
+
+.dropdown-content a {
+    display: block;
+    margin-bottom: 5px; /* Add margin between each product */
+}
