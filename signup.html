@@ -2,14 +2,9 @@
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="D:\RRP\static\signup-style.css">
+    <link rel="stylesheet" href="/static/signup-style.css">
 </head>
 <body>
-{% extends "base.html" %}
-
-{% block title %}Sign Up{% endblock %}
-
-{% block content %}
     <div class="signup-container">
         <form class="signup-form" action="/signup" method="POST">
             <h2>Sign Up</h2>
@@ -38,9 +33,8 @@
             </div>
         </form>
         <div class="already-signed-up">
-            <p>Already have an account? <a href="D:\RRP\templates\login.html">Log In</a></p>
+            <p>Already have an account? <a href="/login.html">Log In</a></p>
         </div>
     </div>
-    {% endblock %}
 </body>
 </html>
